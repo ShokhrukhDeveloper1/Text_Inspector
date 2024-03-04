@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Text_Inspector
 {
@@ -46,6 +40,52 @@ namespace Text_Inspector
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
+        }
+
+        int j = 1;
+        SaveFileDialog sfd = new SaveFileDialog() { Filter = ".txt|*.txt" };
+        private void Save_File_Click(object sender, EventArgs e)
+        {
+            if(sfd.ShowDialog() == DialogResult.OK)
+            {
+                timer2.Enabled = true;
+                guna2ProgressIndicator1.Visible = true;
+            }
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(j!= 2)
+            {
+                j++;
+            }
+            else
+            {
+                timer2.Enabled = false;
+                guna2ProgressIndicator1.Visible = false;
+                File.WriteAllText(sfd.FileName, richTextBox1.Text);
+                MessageBox.Show("Fayl saqlandi...", "Xabar!", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                richTextBox1.Text = "";
+            }
+        }
+
+        private void Open_Word_Click(object sender, EventArgs e)
+        {
+            Word.Application wd = new Word.Application();
+            wd.Visible = true;
+            wd.WindowState = Word.WdWindowState.wdWindowStateNormal;
+            Word.Document docx = wd.Documents.Add();
+            Word.Paragraph paragraph;
+            paragraph = docx.Paragraphs.Add();
+            paragraph.Range.Text = richTextBox1.Text;
+            //docx.SaveAs2(@"C:\Users\msi pc\Desktop\mydoc.docx");
+            docx.AcceptAllRevisionsShown();
+            wd.Quit();
+        }
+
+        private void Analys_Text_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
