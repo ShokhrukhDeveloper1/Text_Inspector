@@ -46,6 +46,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             // guna2Button4
             // 
             this.guna2Button4.Animated = true;
+            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -93,6 +95,7 @@
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -115,6 +118,7 @@
             // Open_Word
             // 
             this.Open_Word.Animated = true;
+            this.Open_Word.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Open_Word.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Open_Word.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Open_Word.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -138,6 +142,7 @@
             // Analys_Text
             // 
             this.Analys_Text.Animated = true;
+            this.Analys_Text.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Analys_Text.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Analys_Text.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Analys_Text.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -160,6 +165,7 @@
             // Save_File
             // 
             this.Save_File.Animated = true;
+            this.Save_File.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Save_File.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Save_File.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Save_File.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -183,6 +189,7 @@
             // Open_File
             // 
             this.Open_File.Animated = true;
+            this.Open_File.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Open_File.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Open_File.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Open_File.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -230,7 +237,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 12);
+            this.label1.Location = new System.Drawing.Point(349, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 36);
             this.label1.TabIndex = 1;
@@ -239,8 +246,10 @@
             // guna2ControlBox3
             // 
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.Animated = true;
             this.guna2ControlBox3.BackColor = System.Drawing.Color.Silver;
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Gold;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox3.Location = new System.Drawing.Point(869, 12);
@@ -251,6 +260,8 @@
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkRed;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(929, 12);
@@ -283,6 +294,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(995, 692);
@@ -298,6 +310,11 @@
             // 
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Form1
             // 
@@ -339,6 +356,7 @@
         private Guna.UI2.WinForms.Guna2Button Open_Word;
         private System.Windows.Forms.Timer timer2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 
