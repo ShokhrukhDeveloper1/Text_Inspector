@@ -16,5 +16,22 @@ namespace Text_Inspector
         {
             InitializeComponent();
         }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            txtDigits.Text = "";
+            txtSentences.Text = "";
+            txtSpaces.Text = "";
+            txtsyllable.Text = "";
+            txtSymbols.Text = "";
+            txtTwoSyllables.Text = "";
+            txtVowels.Text = "";
+            txtWords.Text = "";
+        }
     }
 }
