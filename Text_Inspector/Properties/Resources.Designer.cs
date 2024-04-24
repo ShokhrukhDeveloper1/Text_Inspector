@@ -63,6 +63,16 @@ namespace Text_Inspector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _165944_2889867627 {
+            get {
+                object obj = ResourceManager.GetObject("165944-2889867627", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back {
             get {
                 object obj = ResourceManager.GetObject("back", resourceCulture);
@@ -83,9 +93,29 @@ namespace Text_Inspector.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap database_management {
+            get {
+                object obj = ResourceManager.GetObject("database-management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap floppy_disk {
             get {
                 object obj = ResourceManager.GetObject("floppy-disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_book_bookshelf_read_4227076479 {
+            get {
+                object obj = ResourceManager.GetObject("library-book-bookshelf-read-4227076479", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
