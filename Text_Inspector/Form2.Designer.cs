@@ -33,6 +33,8 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtBirXil = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtSymbols = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSpaces = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtVowels = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,8 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBirXil = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -59,11 +60,12 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Navy;
+            this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(96, 752);
+            this.guna2Panel1.Size = new System.Drawing.Size(172, 752);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Button1
@@ -81,7 +83,7 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Lime;
             this.guna2Button1.Image = global::Text_Inspector.Properties.Resources.back;
             this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(12, 3);
+            this.guna2Button1.Location = new System.Drawing.Point(48, 3);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(73, 59);
             this.guna2Button1.TabIndex = 0;
@@ -92,9 +94,9 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Silver;
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(96, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(172, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1098, 62);
+            this.guna2Panel2.Size = new System.Drawing.Size(1022, 62);
             this.guna2Panel2.TabIndex = 1;
             // 
             // label1
@@ -129,17 +131,50 @@
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(96, 62);
+            this.guna2Panel3.Location = new System.Drawing.Point(172, 62);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1098, 690);
+            this.guna2Panel3.Size = new System.Drawing.Size(1022, 690);
             this.guna2Panel3.TabIndex = 2;
             this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
+            // 
+            // txtBirXil
+            // 
+            this.txtBirXil.BorderRadius = 8;
+            this.txtBirXil.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBirXil.DefaultText = "0";
+            this.txtBirXil.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBirXil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBirXil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBirXil.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBirXil.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBirXil.Font = new System.Drawing.Font("Franklin Gothic Book", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirXil.ForeColor = System.Drawing.Color.Black;
+            this.txtBirXil.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBirXil.Location = new System.Drawing.Point(662, 493);
+            this.txtBirXil.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBirXil.Name = "txtBirXil";
+            this.txtBirXil.PasswordChar = '\0';
+            this.txtBirXil.PlaceholderText = "";
+            this.txtBirXil.ReadOnly = true;
+            this.txtBirXil.SelectedText = "";
+            this.txtBirXil.Size = new System.Drawing.Size(248, 32);
+            this.txtBirXil.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Book", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(98, 493);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(329, 32);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Matndagi bir xil so\'zlar soni";
             // 
             // txtSymbols
             // 
             this.txtSymbols.BorderRadius = 8;
             this.txtSymbols.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSymbols.DefaultText = "";
+            this.txtSymbols.DefaultText = "0";
             this.txtSymbols.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSymbols.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSymbols.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -162,7 +197,7 @@
             // 
             this.txtSpaces.BorderRadius = 8;
             this.txtSpaces.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSpaces.DefaultText = "";
+            this.txtSpaces.DefaultText = "0";
             this.txtSpaces.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSpaces.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSpaces.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -185,7 +220,7 @@
             // 
             this.txtVowels.BorderRadius = 8;
             this.txtVowels.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVowels.DefaultText = "";
+            this.txtVowels.DefaultText = "0";
             this.txtVowels.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtVowels.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtVowels.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -208,7 +243,7 @@
             // 
             this.txtTwoSyllables.BorderRadius = 8;
             this.txtTwoSyllables.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTwoSyllables.DefaultText = "";
+            this.txtTwoSyllables.DefaultText = "0";
             this.txtTwoSyllables.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTwoSyllables.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTwoSyllables.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -231,7 +266,7 @@
             // 
             this.txtsyllable.BorderRadius = 8;
             this.txtsyllable.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsyllable.DefaultText = "";
+            this.txtsyllable.DefaultText = "0";
             this.txtsyllable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtsyllable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtsyllable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -254,7 +289,7 @@
             // 
             this.txtDigits.BorderRadius = 8;
             this.txtDigits.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDigits.DefaultText = "";
+            this.txtDigits.DefaultText = "0";
             this.txtDigits.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDigits.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDigits.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -277,7 +312,7 @@
             // 
             this.txtSentences.BorderRadius = 8;
             this.txtSentences.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSentences.DefaultText = "";
+            this.txtSentences.DefaultText = "0";
             this.txtSentences.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSentences.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSentences.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -300,7 +335,7 @@
             // 
             this.txtWords.BorderRadius = 8;
             this.txtWords.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtWords.DefaultText = "";
+            this.txtWords.DefaultText = "0";
             this.txtWords.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtWords.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtWords.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -399,38 +434,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Matnda mavjud so\'zlar soni";
             // 
-            // txtBirXil
+            // guna2Button3
             // 
-            this.txtBirXil.BorderRadius = 8;
-            this.txtBirXil.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirXil.DefaultText = "";
-            this.txtBirXil.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBirXil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBirXil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirXil.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirXil.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirXil.Font = new System.Drawing.Font("Franklin Gothic Book", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirXil.ForeColor = System.Drawing.Color.Black;
-            this.txtBirXil.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirXil.Location = new System.Drawing.Point(662, 493);
-            this.txtBirXil.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtBirXil.Name = "txtBirXil";
-            this.txtBirXil.PasswordChar = '\0';
-            this.txtBirXil.PlaceholderText = "";
-            this.txtBirXil.ReadOnly = true;
-            this.txtBirXil.SelectedText = "";
-            this.txtBirXil.Size = new System.Drawing.Size(248, 32);
-            this.txtBirXil.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Book", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(98, 493);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(329, 32);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Matndagi bir xil so\'zlar soni";
+            this.guna2Button3.Animated = true;
+            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Lime;
+            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button3.Location = new System.Drawing.Point(12, 98);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(149, 41);
+            this.guna2Button3.TabIndex = 5;
+            this.guna2Button3.Text = "Saqlash";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // Form2
             // 
@@ -478,5 +502,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtSentences;
         public Guna.UI2.WinForms.Guna2TextBox txtBirXil;
         private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

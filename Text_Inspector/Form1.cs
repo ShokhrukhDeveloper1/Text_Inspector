@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Text_Inspector
 {
@@ -14,8 +16,11 @@ namespace Text_Inspector
             InitializeComponent();
         }
 
+        Form3 frm = new Form3();
+
         int i = 1;
         OpenFileDialog ofd = new OpenFileDialog() { Filter = ".txt|*.txt" };
+
         private void Open_File_Click(object sender, EventArgs e)
         {
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -46,6 +51,7 @@ namespace Text_Inspector
 
         int j = 1;
         SaveFileDialog sfd = new SaveFileDialog() { Filter = ".txt|*.txt" };
+
         private void Save_File_Click(object sender, EventArgs e)
         {
             if(sfd.ShowDialog() == DialogResult.OK)
@@ -54,6 +60,7 @@ namespace Text_Inspector
                 guna2ProgressIndicator1.Visible = true;
             }
         }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             if(j!= 2)
@@ -65,10 +72,40 @@ namespace Text_Inspector
                 timer2.Enabled = false;
                 guna2ProgressIndicator1.Visible = false;
                 File.WriteAllText(sfd.FileName, richTextBox1.Text);
+
+                //Bazaga ma'lumotlarni saqlash
+                SqlConnection conn = new SqlConnection(
+                    @"Data Source=HOME-PC;Initial Catalog=TextInspektorDb;
+                    Integrated Security=True;TrustServerCertificate=True");
+
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("insert into Texts values(@Text)", conn);
+                cmd.Parameters.AddWithValue("@Text", richTextBox1.Text);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
                 MessageBox.Show("Fayl saqlandi...", "Xabar!", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 richTextBox1.Text = "";
+                DataGridView();
             }
+        }
+
+        public void DataGridView()
+        {
+            SqlConnection conn = new SqlConnection(
+                    @"Data Source=HOME-PC;Initial Catalog=TextInspektorDb;
+                    Integrated Security=True;TrustServerCertificate=True");
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select * from Texts", conn);
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            frm.dataGridView1.DataSource = dt;
+
+            conn.Close();
         }
 
         private void Open_Word_Click(object sender, EventArgs e)
@@ -158,9 +195,10 @@ namespace Text_Inspector
 
                 frm.txtsyllable.Text = boginliSoz.ToString();
                 frm.txtTwoSyllables.Text = ikkidanKatta.ToString();
-                //ali.
+                
                 int countBirxil = 0;
                 List<string> toplam = new List<string>();
+
                 for(int i = 0; i < word.Length; i++)
                 {
                     if (word[i].EndsWith(".") || word[i].EndsWith("?") 
@@ -200,6 +238,19 @@ namespace Text_Inspector
         private void timer3_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            frm.Show();
+            frm.dataGridView1.Visible = false;
+            frm.dataGridView2.Visible = false;
+            frm.pictureBox1.Visible = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DataGridView();
         }
     }
 }
